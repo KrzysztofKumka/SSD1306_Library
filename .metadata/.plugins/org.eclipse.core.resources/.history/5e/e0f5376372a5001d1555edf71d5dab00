@@ -1,0 +1,11 @@
+/*
+ * SSD1306_OLED.c
+ *
+ *  Created on: Feb 5, 2023
+ *      Author: krzysztof
+ */
+
+#include "main.h"
+#include "SSD1306_OLED.h"
+
+I2C_HandleTypeDef *oled_i2c;
