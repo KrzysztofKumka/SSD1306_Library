@@ -1,10 +1,17 @@
-18:35:12 **** Incremental Build of configuration Debug for project SSD1306 ****
+15:38:23 **** Incremental Build of configuration Debug for project SSD1306 ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "SSD1306.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\STM32\SSD1306_Library\SSD1306\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SSD1306.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SSD1306.elf
+ 
 arm-none-eabi-size   SSD1306.elf 
+arm-none-eabi-objdump -h -S  SSD1306.elf  > "SSD1306.list"
    text	   data	    bss	    dec	    hex	filename
-  10356	     20	   1724	  12100	   2f44	SSD1306.elf
+  10540	     20	   2748	  13308	   33fc	SSD1306.elf
 Finished building: default.size.stdout
  
+Finished building: SSD1306.list
+ 
 
-18:35:13 Build Finished. 0 errors, 0 warnings. (took 332ms)
+15:38:24 Build Finished. 0 errors, 0 warnings. (took 581ms)
 
