@@ -1,5 +1,5 @@
 # SSD1306_Library
-Library ported for STM32 from ADAFRUIT Arduino example.
+Library ported for STM32 from ADAFRUIT Arduino example. Support for 128x64px OLED display via I2C interface.
 
 Adafruit SSD1306 Arduino library: https://github.com/adafruit/Adafruit_SSD1306
 
