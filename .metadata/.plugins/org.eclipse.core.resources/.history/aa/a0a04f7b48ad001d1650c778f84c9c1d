@@ -95,7 +95,7 @@ int main(void)
 
   SSD1306_Clear(BLACK);
 
-  GFX_DrawRoundRectangle(50, 10, 30, 20, 5, WHITE);
+  GFX_DrawRoundRectangle(50, 50, 30, 20, 5, WHITE);
 
   SSD1306_Display();
 

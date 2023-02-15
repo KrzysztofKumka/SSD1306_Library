@@ -25,7 +25,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "SSD1306_OLED.h"
-#include "GFX_BW.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,9 +92,7 @@ int main(void)
 
   SSD1306_Init(&hi2c1);
 
-  SSD1306_Clear(BLACK);
-
-  GFX_DrawRoundRectangle(50, 10, 30, 20, 5, WHITE);
+  SSD1306_Clear(WHITE);
 
   SSD1306_Display();
 
